@@ -17,9 +17,9 @@ const Navigation = ({userObj}) => (
                         alignItems:"center",
                         fontSize:12
                     }}>
-                    <FontAwesomeIcon icon={faHome} color={"#04AAFF"} size="2x"/>
+                    <FontAwesomeIcon icon={faHome} color={"#48A8C6"} size="2x"/>
                     <span style={{marginTop:10}}>
-                        Home
+                        홈
                     </span>
                 </Link>
             </li>
@@ -33,13 +33,9 @@ const Navigation = ({userObj}) => (
                         alignItems:"center",
                         fontSize:12
                     }}>
-                    <FontAwesomeIcon icon={faUser} color={"#04AAFF"} size = "2x"/>
+                    <FontAwesomeIcon icon={faUser} color={"#48A8C6"} size = "2x"/>
                     <span style={{marginTop:10}}>
-                        {
-                            userObj.displayName
-                            ? `${userObj.displayName}의 Profile`
-                            : "Profile"
-                        }
+                        프로필
                     </span>
                 </Link>
             </li>

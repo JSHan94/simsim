@@ -4,10 +4,12 @@ import {
   faTwitter,
   faGoogle,
   faGithub,
+  faFacebook,
 } from "@fortawesome/free-brands-svg-icons";
-import { authService, firebaseInstance } from "fbase";
+import { analyticService, authService, firebaseInstance} from "fbase";
 import AuthForm from "components/AuthForm";
-
+import { faCheckCircle } from "@fortawesome/free-solid-svg-icons";
+import FriendStates from 'components/FriendStates';
 const Auth = () => {
   const onSocialClick = async (event) => {
     const {
@@ -16,26 +18,27 @@ const Auth = () => {
     let provider;
     if (name === "google") {
       provider = new firebaseInstance.auth.GoogleAuthProvider();
-    } else if (name === "github") {
-      provider = new firebaseInstance.auth.GithubAuthProvider();
+    } else if (name === "facebook") {
+      provider = new firebaseInstance.auth.FacebookAuthProvider();
     }
     await authService.signInWithPopup(provider);
   };
   return (
     <div className="authContainer">
       <FontAwesomeIcon
-        icon={faTwitter}
+        icon={faCheckCircle}
         color={"#04AAFF"}
         size="3x"
         style={{ marginBottom: 30 }}
       />
-      <AuthForm />
-      <div className="authBtns">
+      {/* <AuthForm /> */}
+      심심 레이더
+      <div>
         <button onClick={onSocialClick} name="google" className="authBtn">
-          Continue with Google <FontAwesomeIcon icon={faGoogle} />
+          Google 계정으로 시작 <FontAwesomeIcon icon={faGoogle} />
         </button>
-        <button onClick={onSocialClick} name="github" className="authBtn">
-          Continue with Github <FontAwesomeIcon icon={faGithub} />
+        <button onClick={onSocialClick} name="facebook" className="authBtn">
+          Facebook 계정으로 시작 <FontAwesomeIcon icon={faFacebook} />
         </button>
       </div>
     </div>

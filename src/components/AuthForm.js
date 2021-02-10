@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { authService } from "fbase";
+import { authService,analyticService } from "fbase";
 
 const inputStyles = {};
 
@@ -29,8 +29,7 @@ const AuthForm = () => {
         );
       } else {
         data = await authService.signInWithEmailAndPassword(email, password);
-      }
-      console.log(data);
+      }     
     } catch (error) {
       setError(error.message);
     }

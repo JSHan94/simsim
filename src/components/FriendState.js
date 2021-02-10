@@ -13,8 +13,8 @@ const FriendState =({feelingObj})=>{
         <div>
             {
                 boring ? (
-                <div className="nweet">
-                 {name} 심심합니다
+                <div className="state">
+                 {name} 심심해요
                 </div>
                 ):(
                 <>
