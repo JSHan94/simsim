@@ -1,5 +1,5 @@
-import React, { Component, useState } from "react";
-import { analyticService, dbService, storageService } from "fbase";
+import React, {useState } from "react";
+import {  dbService} from "fbase";
 
 const BoringButton = ({userObj}) =>{
   const checkedColor = "#48A8C6 "
@@ -50,9 +50,12 @@ const BoringButton = ({userObj}) =>{
 
 
   return (
-    <div>
-      <button className="BoringBtn" style={{color : notBoringColor, backgroundColor : boringColor}} onClick={onBoringClick}>심심해</button>
-      <button className="BoringBtn" style={{color : boringColor, backgroundColor : notBoringColor}} onClick={onNotBoringClick}>괜찮아</button>
+    <div >
+      <span>지금 심심한가요?</span>
+      <div className="boringBox">
+        <button className="boringBtn" style={{color : notBoringColor, backgroundColor : boringColor}} onClick={onBoringClick}>심심해</button>
+        <button className="boringBtn" style={{color : boringColor, backgroundColor : notBoringColor}} onClick={onNotBoringClick}>괜찮아</button>
+      </div>
     </div>
   )
 }

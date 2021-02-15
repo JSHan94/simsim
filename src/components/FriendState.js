@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 //심심함 카드 보여주는 코드
 

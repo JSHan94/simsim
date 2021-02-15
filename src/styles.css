@@ -4,6 +4,7 @@ input {
   all: unset;
   appearance: none;
   box-sizing: border-box;
+  color: #48A8C6 ;
 }
 
 * {
@@ -32,30 +33,60 @@ form {
   width: 100%;
 }
 
-/*BoringButton*/
-.BoringBtn {
-  cursor: pointer;
-  width: 50%;
-  padding: 10px 20px;
-  text-align: center;
-  color: white;
-  border-radius: 10px;
-  background-color: #04aaff;
-  cursor: pointer;
-}
-
-
-
-.nweet-input::placeholder {
-  color: white;
-  opacity: 0.9;
-}
-
+/* width가 320px인채로 아래로만 키움 */
 .container {
   width: 100%;
   max-width: 320px;
   display: flex;
   flex-direction: column;
+
+}
+
+/*BoringButton*/
+.boringBox{
+  display:flex;
+  justify-content: center;
+}
+.boringBtn {
+  cursor: pointer;
+  width: 100%;
+  padding: 10px 10px;
+  border: 1px solid #48A8C6;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top : 10px;
+  margin-bottom : 10px;
+  margin-right: 10px;
+  margin-left : 10px;
+}
+
+/*HashTag*/
+
+.hashBox{
+  display:flex;
+  justify-content: center;
+}
+.hashInput{
+  width: 100%;
+  padding: 10px 10px;
+  border-radius: 10px;
+  border: 1px solid #48A8C6;
+  text-align: center;
+  background-color: white;
+  margin-top : 10px;
+  margin-bottom : 10px;
+  margin-right: 10px;
+  margin-left : 10px;
+}
+.hashSubmit{
+  width: 30%;
+}
+
+/*extra*/
+
+.nweet-input::placeholder {
+  color: white;
+  opacity: 0.9;
 }
 
 .formInput {
@@ -75,7 +106,6 @@ form {
   text-align: center;
   color: white;
   border-radius: 20px;
-  background-color: #04aaff;
   cursor: pointer;
 }
 
@@ -84,6 +114,7 @@ form {
   cursor: pointer;
   background-color: tomato;
 }
+
 
 /* Profile Page */
 

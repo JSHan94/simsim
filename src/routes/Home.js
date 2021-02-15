@@ -1,8 +1,9 @@
 import React,{useState,useEffect} from 'react';
-import {dbService,storageService} from "fbase";
+import {dbService} from "fbase";
 import BoringButton from 'components/BoringButton';
-import FriendState from 'components/FriendState';
+
 import FriendStates from 'components/FriendStates';
+import HashTagForm from 'components/HashTagForm';
 
 
 const Home =  ({userObj}) =>{
@@ -22,20 +23,12 @@ const Home =  ({userObj}) =>{
     return(
     <div className="container">
         
-        <input type="text" value="지금 심심한가요?" style={{marginBottom : 10}}></input>
         <BoringButton userObj={userObj}></BoringButton>
         
-        <input type="text" value="지금 '심심해요'를 누른 친구들"
-            style={{marginTop:30, marginBottom : 10}}></input>
+        <HashTagForm userObj={userObj}></HashTagForm>
         
         <FriendStates></FriendStates>
-        {/* <div>
-            {
-                states.map((feeling)=>(
-                    <FriendState feelingObj = {feeling}/>
-                ))
-            }
-        </div> */}
+
     </div>
     )
 }

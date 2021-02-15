@@ -1,15 +1,12 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faTwitter,
   faGoogle,
-  faGithub,
   faFacebook,
 } from "@fortawesome/free-brands-svg-icons";
-import { analyticService, authService, firebaseInstance} from "fbase";
-import AuthForm from "components/AuthForm";
+import { authService, firebaseInstance} from "fbase";
 import { faCheckCircle } from "@fortawesome/free-solid-svg-icons";
-import FriendStates from 'components/FriendStates';
+
 const Auth = () => {
   const onSocialClick = async (event) => {
     const {
