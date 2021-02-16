@@ -82,6 +82,11 @@ form {
   width: 30%;
 }
 
+.tag {
+  display: flex;
+  flex-direction: row;
+}
+
 /*extra*/
 
 .nweet-input::placeholder {
@@ -104,7 +109,9 @@ form {
   width: 100%;
   padding: 7px 20px;
   text-align: center;
-  color: white;
+  
+  background-color:#48A8C6;
+  color : white;
   border-radius: 20px;
   cursor: pointer;
 }

@@ -7,19 +7,7 @@ import HashTagForm from 'components/HashTagForm';
 
 
 const Home =  ({userObj}) =>{
-    
-    const [states, setStates] = useState([])
 
-    useEffect(()=>{
-        dbService.collection("states").onSnapshot((snapshot)=>{
-            const stateArray = snapshot.docs.map((doc) =>({
-                id : doc.id,
-                ...doc.data()
-            }))
-
-            setStates(stateArray)
-        })
-    },[])
     return(
     <div className="container">
         

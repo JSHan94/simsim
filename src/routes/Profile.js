@@ -52,7 +52,6 @@ export default ({refreshUser, userObj}) => {
             <span className="formBtn cancelBtn logOut" onClick={onLogOutClick}>
                     로그아웃
             </span>
-
         </div>
     )
 }

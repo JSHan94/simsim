@@ -1,10 +1,21 @@
 import React from "react";
+import HashTag from "./HashTag";
 
 //심심함 카드 보여주는 코드
 
-const FriendState =({feelingObj})=>{
-    const state = feelingObj.state
-    const name = feelingObj.name
+const FriendState =({stateObj,index})=>{
+    const state = stateObj.state
+    const name = stateObj.name
+    var tags = null
+    if (stateObj.tag !== undefined){
+        
+        tags = stateObj.tag.filter(v=>v!=="").map(
+            value =>
+                (<HashTag tag={value}></HashTag>)   
+        )
+        console.log(tags)
+    }
+
     var boring = false
     if (state ==="Boring"){
         boring = true
@@ -14,7 +25,10 @@ const FriendState =({feelingObj})=>{
             {
                 boring ? (
                 <div className="state">
-                 {name} 심심해요
+                    {name}
+                    <div className="tag">
+                        {tags}
+                    </div>
                 </div>
                 ):(
                 <>

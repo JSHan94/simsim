@@ -21,8 +21,8 @@ const FriendStates = ()=>{
                 지금 '심심해요'를 누른 친구들
             </span>
             {
-                states.map((feeling)=>(
-                    <FriendState feelingObj = {feeling}/>
+                states.map((state,index)=>(
+                    <FriendState stateObj = {state} key={index}/>
                 ))
             }
         </div>
